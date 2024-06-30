@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Usecallback = React.memo(({ todos, addTodos }) => {
-  console.log('Component rendered');
-
   return (
     <>
       <h1>Hi</h1>
@@ -13,5 +11,4 @@ const Usecallback = React.memo(({ todos, addTodos }) => {
     </>
   );
 });
-
 export default Usecallback;
