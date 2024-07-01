@@ -9,8 +9,7 @@ const useFetch =(url)=>
             .then((res)=>res.json())
             .then((data)=>setData(data));
         },[url]);
-        
-        console.log(data)
+    
         return [data]
     };
 
