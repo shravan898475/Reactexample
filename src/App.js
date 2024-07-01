@@ -1,5 +1,6 @@
 import React,{useState,useCallback} from "react";
 import Usecallback from "./Components/Usecallback";
+import Customehookexpl from "./Components/Customehookexpl";
 function App() {
 
   const[count,setCount]=useState(0);
@@ -19,7 +20,9 @@ function App() {
   return (
     <>
       <Usecallback todos={todos} addTodos={addTodos} />
-      <h1>hello</h1>
+      <hr/>
+      <p>expl for custome hooks</p>
+      <Customehookexpl />
 
       <h2>count :{count}</h2>
 
