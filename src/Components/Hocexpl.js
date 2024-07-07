@@ -10,7 +10,6 @@ export default function Hoc()
     )
 }
 
-
 function Hoccomponet(props)
 {
     return(

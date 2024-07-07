@@ -2,6 +2,7 @@ import React,{useState,useCallback} from "react";
 import Usecallback from "./Components/Usecallback";
 import Customehookexpl from "./Components/Customehookexpl";
 import Hoc from "./Components/Hocexpl";
+import Debouncing from "./Components/Debouncing";
 function App() {
 
   const[count,setCount]=useState(0);
@@ -29,6 +30,8 @@ function App() {
      <hr/>
       <p>Hoc Example</p>
       <Hoc/>
+      <p>Debouncing Example</p>
+      <Debouncing />
 
     
     </>
