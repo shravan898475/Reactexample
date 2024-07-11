@@ -2,7 +2,10 @@ import React,{useState,useCallback} from "react";
 import Usecallback from "./Components/Usecallback";
 import Customehookexpl from "./Components/Customehookexpl";
 import Hoc from "./Components/Hocexpl";
-import Debouncing from "./Components/Debouncing";
+// import Debouncing from "./Components/Debouncing";
+import TwoWayBinding from "./Components/TwoWayBinding";
+import Statelifting from "./Components/Statelifting";
+import Reactwindow from "./Components/Reactwindow";
 function App() {
 
   const[count,setCount]=useState(0);
@@ -18,6 +21,10 @@ function App() {
      setTodo((t) => [...t,'new todos']);
     },[todos])
 
+    function Stateliftfun(val)
+    {
+      alert(val)
+    }
 
   return (
     <>
@@ -31,7 +38,15 @@ function App() {
       <p>Hoc Example</p>
       <Hoc/>
       <p>Debouncing Example</p>
-      <Debouncing />
+      {/* <Debouncing /> */}
+
+      <TwoWayBinding/>
+
+      <p>State Lifting</p>  
+      <Statelifting alert={Stateliftfun} />
+      <p>React Window</p>
+      <Reactwindow />
+
 
     
     </>
