@@ -1,4 +1,4 @@
-import React,{useState,useCallback} from "react";
+import React,{useState,useCallback,createContext} from "react";
 import Usecallback from "./Components/Usecallback";
 import Customehookexpl from "./Components/Customehookexpl";
 import Hoc from "./Components/Hocexpl";
@@ -6,10 +6,16 @@ import Hoc from "./Components/Hocexpl";
 import TwoWayBinding from "./Components/TwoWayBinding";
 import Statelifting from "./Components/Statelifting";
 import Reactwindow from "./Components/Reactwindow";
+import Child from "./Components/Child";
+import Oauth0 from "./Components/Oauth";
+
+export const Globalval=createContext();
+
 function App() {
 
   const[count,setCount]=useState(0);
   const[todos,setTodo]=useState([]);
+  const[color,setColor]=useState('red');
 
   const increment =()=>
     {
@@ -28,6 +34,7 @@ function App() {
 
   return (
     <>
+    <Globalval.Provider value={{appcolor:color}}>
       <Usecallback todos={todos} addTodos={addTodos} />
       <h2>count :{count}</h2>
       <button onClick={increment}>Add Count</button>
@@ -42,12 +49,16 @@ function App() {
 
       <TwoWayBinding/>
 
-      <p>State Lifting</p>  
+      <p>State Lifting </p>  
       <Statelifting alert={Stateliftfun} />
       <p>React Window</p>
       <Reactwindow />
+      <Child/>
 
+      </Globalval.Provider>
 
+      <p>Oauth0 </p>
+      <Oauth0 />
     
     </>
   );

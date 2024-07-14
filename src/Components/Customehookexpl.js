@@ -3,7 +3,6 @@ import useFetch from "../hooks/useFetch";
 export default function Customehookexpl()
 {
     const [data] =useFetch('https://jsonplaceholder.typicode.com/todos');
-
     return(
         <>
           {data &&
