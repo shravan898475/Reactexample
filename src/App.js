@@ -8,6 +8,7 @@ import Statelifting from "./Components/Statelifting";
 import Reactwindow from "./Components/Reactwindow";
 import Child from "./Components/Child";
 import Oauth0 from "./Components/Oauth";
+import Customehookaxios from "./Components/Customehook_axios";
 
 export const Globalval=createContext();
 
@@ -59,6 +60,8 @@ function App() {
 
       <p>Oauth0 </p>
       <Oauth0 />
+      <p> Customehookaxios</p>
+      <Customehookaxios />
     
     </>
   );
